@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hammed Up Burgers - Order</title>
+        <link rel="stylesheet" href="posStyle.css" />
+    </head>
+
+    <body>
+        <div class="base">
+            <div class="Menu">
+                <h1>Menu</h1>
+                <div class="items">
+                    <div class="item">
+                        <img src="assets/CheeseBurger2.webp" />
+                        <h4><b>Quarter Pounder</b></h4>
+                        <p>80¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="qp"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick=" addItem()">Add to Order</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/DoubleBurger.webp" />
+                        <h4><b> Double Quarter Pounder</b></h4>
+                        <p>120¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="dqp"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick=" addItem()">Add to Order</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/ChickenBurger.jpg" />
+                        <h4><b> Chicken Deluxe Burger</b></h4>
+                        <p>85¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="cdb"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick="addItem()">Add to Order</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/BaconCheese.webp" />
+                        <h4><b> Bacon and Cheese Burger</b></h4>
+                        <p>90¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="bcb"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick="addItem()">Add to Order</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/Poutine.webp" />
+                        <h4><b> Overload Poutine</b></h4>
+                        <p>80¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="pou"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick="addItem()">Add to Order</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/Plant Based.webp" />
+                        <h4><b> Plant Based Pounder</b></h4>
+                        <p>80¥</p>
+                        <label for="quantity">Quantity:</label>
+                        <input
+                            type="number"
+                            id="veg"
+                            min="0"
+                            max="20"
+                            onKeyDown="return false"
+                            value="0"
+                        />
+                        <button id="Add" onclick="addItem()">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Ordered">
+                <h1>Order List</h1>
+                <h3 id="total" style="color: white;">Total Price:</h3>
+                <textarea id="receipt"></textarea>
+                
+                <h3 id="cashText">Cash: <input type="text" name="cash" id="cash" onkeypress="return isNumber(event)" style="font-size: larger;"/></h3>
+                <button class="change" style="height:100px;
+                width:200px;" onclick="payMoney()">Pay</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
